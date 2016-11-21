@@ -1,0 +1,15 @@
+# INPUTRC
+# 	The filename for the readline startup file, overriding 
+# 	the default of ~/.inputrc (see READLINE).
+
+# URL: https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man1/bash.1.html
+
+
+set completion-ignore-case On
+set expand-tilde on
+set convert-meta off
+set input-meta on
+set output-meta on
+set show-all-if-ambiguous on
+set visible-stats on
+#set -o vi

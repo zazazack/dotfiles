@@ -1,0 +1,1 @@
+export IRCNICK='zwilson'
