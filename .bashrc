@@ -77,7 +77,7 @@ if [ -n "$force_color_prompt" ]; then
 fi
 
 if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\W\[\033[00m\]$(__git_ps1 " branch: (%s)")\$ '
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
@@ -164,6 +164,11 @@ if [ -f $(brew --prefix)/etc/bash_completion ]; then
 fi
 
 #------------------------------
-# HOMEBREW
+# GIT
 #------------------------------
-export HOMEBREW_GITHUB_API_TOKEN="fcf7eb3148364acd0e2c2e397ee1fa013c2b9c5d"
+if [ -f ~/.git-completion.bash ]; then
+    source .git-completion.bash
+fi
+if [ -f ~/.git-prompt.sh ]; then
+    source .git-prompt.sh
+fi
