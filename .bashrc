@@ -8,6 +8,10 @@ case $- in
       *) return;;
 esac
 
+# use GNU coreutils by default (installed w/ brew)
+export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+# load the GNU coreutil man pages instead of the default
+export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 #-------------------------------
 # HISTORY
 #-------------------------------
@@ -166,9 +170,21 @@ fi
 #------------------------------
 # GIT
 #------------------------------
+# provides command completion for git, if the file is available
 if [ -f ~/.git-completion.bash ]; then
     source .git-completion.bash
+# adds the git branch to the default prompt when in a directory containing a git repo (i.e. `.git` file)
 fi
 if [ -f ~/.git-prompt.sh ]; then
     source .git-prompt.sh
 fi
+
+#------------------------------
+# VIRTUALBOX
+#------------------------------
+# provides command completion for virtualbox cli (VBoxManage, etc...), if the file is available
+if [ -f ~/.virtualbox-completion.bash ]; then
+    source .virtualbox-completion.bash
+fi
+
+
