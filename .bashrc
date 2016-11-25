@@ -8,10 +8,17 @@ case $- in
       *) return;;
 esac
 
-# use GNU coreutils by default (installed w/ brew)
+#-------------------------------
+# PATH VARIABLES
+#-------------------------------
+# use GNU coreutils (installed via brew) instead of defaults
 export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 # load the GNU coreutil man pages instead of the default
 export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
+# use GNU findutils (installed via brew) instead of defaults
+export PATH="/usr/local/opt/findutils/libexec/gnubin:$PATH"
+# load the GNU findutils man pages instead of the default
+export MANPATH="/usr/local/opt/findutils/libexec/gnuman:$MANPATH"
 #-------------------------------
 # HISTORY
 #-------------------------------
@@ -186,5 +193,3 @@ fi
 if [ -f ~/.virtualbox-completion.bash ]; then
     source .virtualbox-completion.bash
 fi
-
-
