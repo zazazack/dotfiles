@@ -19,6 +19,7 @@ export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 export PATH="/usr/local/opt/findutils/libexec/gnubin:$PATH"
 # load the GNU findutils man pages instead of the default
 export MANPATH="/usr/local/opt/findutils/libexec/gnuman:$MANPATH"
+
 #-------------------------------
 # HISTORY
 #-------------------------------
