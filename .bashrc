@@ -9,6 +9,18 @@ case $- in
 esac
 
 #-------------------------------
+# PATH VARIABLES
+#-------------------------------
+# use GNU coreutils (installed via brew) instead of defaults
+export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+# load the GNU coreutil man pages instead of the default
+export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
+# use GNU findutils (installed via brew) instead of defaults
+export PATH="/usr/local/opt/findutils/libexec/gnubin:$PATH"
+# load the GNU findutils man pages instead of the default
+export MANPATH="/usr/local/opt/findutils/libexec/gnuman:$MANPATH"
+
+#-------------------------------
 # HISTORY
 #-------------------------------
 # don't put duplicate lines or lines starting with space in the history.
@@ -166,9 +178,19 @@ fi
 #------------------------------
 # GIT
 #------------------------------
+# provides command completion for git, if the file is available
 if [ -f ~/.git-completion.bash ]; then
     source .git-completion.bash
+# adds the git branch to the default prompt when in a directory containing a git repo (i.e. `.git` file)
 fi
 if [ -f ~/.git-prompt.sh ]; then
     source .git-prompt.sh
+fi
+
+#------------------------------
+# VIRTUALBOX
+#------------------------------
+# provides command completion for virtualbox cli (VBoxManage, etc...), if the file is available
+if [ -f ~/.virtualbox-completion.bash ]; then
+    source .virtualbox-completion.bash
 fi
