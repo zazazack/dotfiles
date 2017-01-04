@@ -1,3 +1,6 @@
 [submodule "submodules/.vim_runtime"]
 	path = submodules/.vim_runtime
 	url = https://github.com/zazazack/vimrc.git
+[submodule "submodules/vimrc"]
+	path = submodules/vimrc
+	url = https://github.com/zazazack/vimrc.git
