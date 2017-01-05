@@ -1,6 +1,6 @@
 # dotfiles
 
-My personal Unix / Linux 'rc' (run-commmand) files. 
+My personal Unix / Linux 'rc' (run-commmand) files.
 
 # Included configs
 
@@ -13,13 +13,9 @@ My personal Unix / Linux 'rc' (run-commmand) files.
 ├── .epicrc
 ├── .git-completion.bash
 ├── .git-prompt.sh
-├── .gitignore
-├── .gitmodules
 ├── .inputrc
 ├── .ircrc
 ├── .login
-├── .mono
-│   └── certs
 ├── .taskrc
 ├── .tmux.conf
 ├── .vimrc
@@ -30,9 +26,3 @@ My personal Unix / Linux 'rc' (run-commmand) files.
 └── submodules
     └── vimrc
 ```
-
-## Bash
-
-- `bash_aliases`
-- bash_profile
-- bashrc
