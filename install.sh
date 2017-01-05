@@ -15,7 +15,7 @@ echo "---- Installing awesome vimrc ----"
 cd $HOME/$FILE_NAME/
 git submodule init
 git submodule update
-ln -s $HOME/$FILE_NAME/vimrc $HOME/.vim_runtime
+ln -Fs $HOME/$FILE_NAME/vimrc $HOME/.vim_runtime
 sh $HOME/$FILE_NAME/vimrc/install_awesome_vimrc.sh
 
 echo '---- Installation completed successfully ----'
