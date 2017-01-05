@@ -12,12 +12,12 @@ echo -e '---- Linking dotfiles to $HOME ----'
 find $PWD -maxdepth 1 -type f -not -iname install.sh -not -iname README.md \
 -not -iname .gitmodules -not -iname .gitignore -exec ln -Fs '{}' $HOME \;
 echo "---- Installing awesome vimrc ----"
+cd $HOME/$FILE_NAME/
+git submodule init
+git submodule update
 ln -s $HOME/$FILE_NAME/vimrc $HOME/.vim_runtime
 sh $HOME/$FILE_NAME/vimrc/install_awesome_vimrc.sh
-echo "---- initializing / udpating submodules ----"
-cd $HOME/$FILE_NAME/vimrc/sources_non_forked/
-git submodule init jedi-vim
-git submodule update jedi-vim/
+
 echo '---- Installation completed successfully ----'
 echo '---- Please exit the shell and RESTART your Terminal for the changes to take effect ----'
 
