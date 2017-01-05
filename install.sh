@@ -23,3 +23,5 @@ echo '---- Please exit the shell and RESTART your Terminal ----'
 
 # TODO: backup script
 # TODO: error check after file backup, and `source`
+# TODO: exclude `git` files from symlinking to ~/
+# TODO: exclude `README.md` from symlinking to ~/
