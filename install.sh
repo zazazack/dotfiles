@@ -14,12 +14,16 @@ find $PWD -maxdepth 1 -type f -not -iname install.sh -not -iname README.md \
 echo "---- Installing awesome vimrc ----"
 ln -s $HOME/$FILE_NAME/vimrc $HOME/.vim_runtime
 sh $HOME/$FILE_NAME/vimrc/install_awesome_vimrc.sh
+echo "---- initializing / udpating submodules ----"
+cd $HOME/$FILE_NAME/vimrc/sources_non_forked/
+git submodule init jedi-vim
+git submodule update jedi-vim/
 echo '---- Installation completed successfully ----'
 echo '---- Please exit the shell and RESTART your Terminal for the changes to take effect ----'
 
 # TODO: backup script
 # TODO: error check after file backup, and `source`
-# TODO: exclude `git` files from symlinking to ~/
-# TODO: exclude `README.md` from symlinking to ~/
+# TODO: exclude `git` files from symlinking to ~/ @done
+# TODO: exclude `README.md` from symlinking to ~/ @done
 # TODO: consider moving files that need to be symlinkd to $HOME to a single directory to simplify the symlinking process and ensure that files that shouldn't be symlinked to $HOME are not.
 # TODO: include a line to install vimrc submodule @done
