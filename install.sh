@@ -8,9 +8,9 @@ FILE_NAME='dotfiles'
 
 
 echo -e '---- Linking dotfiles to $HOME ----'
-# version below will NOT overwrite existing files w/ the same name
+# version below WILL overwrite existing files w/ the same name
 find $PWD -maxdepth 1 -type f -not -iname install.sh -not -iname README.md \
--not -iname .gitmodules -not -iname .gitignore -exec ln -s '{}' $HOME \;
+-not -iname .gitmodules -not -iname .gitignore -exec ln -Fs '{}' $HOME \;
 echo "---- Installing awesome vimrc ----"
 ln -s $HOME/$FILE_NAME/vimrc $HOME/.vim_runtime
 sh $HOME/$FILE_NAME/vimrc/install_awesome_vimrc.sh
