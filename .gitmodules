@@ -1,3 +1,6 @@
 [submodule "submodules/vimrc"]
 	path = submodules/vimrc
 	url = https://github.com/zazazack/vimrc.git
+[submodule "vimrc"]
+	path = vimrc
+	url = https://github.com/zazazack/vimrc.git
